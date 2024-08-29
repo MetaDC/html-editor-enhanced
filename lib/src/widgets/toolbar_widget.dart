@@ -1120,7 +1120,8 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                               newColor = color;
                             },
                             title: Text('Choose a Color',
-                                style: Theme.of(context).textTheme.headlineSmall),
+                                style:
+                                    Theme.of(context).textTheme.headlineSmall),
                             width: 40,
                             height: 40,
                             spacing: 0,
@@ -1945,67 +1946,69 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                 children: [
                                   if (widget
                                       .htmlToolbarOptions.allowImagePicking)
-                                    Text('Select from files',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold)),
+                                    // Text('Select from files',
+                                    //     style: TextStyle(
+                                    //         fontWeight: FontWeight.bold)),
+                                    if (widget
+                                        .htmlToolbarOptions.allowImagePicking)
+                                      SizedBox(height: 10),
                                   if (widget
                                       .htmlToolbarOptions.allowImagePicking)
-                                    SizedBox(height: 10),
-                                  if (widget
-                                      .htmlToolbarOptions.allowImagePicking)
-                                    TextFormField(
-                                        controller: filename,
-                                        readOnly: true,
-                                        decoration: InputDecoration(
-                                          prefixIcon: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                backgroundColor:
-                                                    Theme.of(context)
-                                                        .dialogBackgroundColor,
-                                                padding: EdgeInsets.only(
-                                                    left: 5, right: 5),
-                                                elevation: 0.0),
-                                            onPressed: () async {
-                                              result = await FilePicker.platform
-                                                  .pickFiles(
-                                                type: FileType.image,
-                                                withData: true,
-                                                allowedExtensions: widget
-                                                    .htmlToolbarOptions
-                                                    .imageExtensions,
-                                              );
-                                              if (result?.files.single.name !=
-                                                  null) {
-                                                setState(() {
-                                                  filename.text =
-                                                      result!.files.single.name;
-                                                });
-                                              }
-                                            },
-                                            child: Text('Choose image',
-                                                style: TextStyle(
-                                                    color: Theme.of(context)
-                                                        .textTheme
-                                                        .bodySmall
-                                                        ?.color)),
-                                          ),
-                                          suffixIcon: result != null
-                                              ? IconButton(
-                                                  icon: Icon(Icons.close),
-                                                  onPressed: () {
-                                                    setState(() {
-                                                      result = null;
-                                                      filename.text = '';
-                                                    });
-                                                  })
-                                              : Container(height: 0, width: 0),
-                                          errorText: validateFailed,
-                                          errorMaxLines: 2,
-                                          border: InputBorder.none,
-                                        )),
-                                  if (widget
-                                      .htmlToolbarOptions.allowImagePicking)
-                                    SizedBox(height: 20),
+                                    // TextFormField(
+                                    //     controller: filename,
+                                    //     readOnly: true,
+                                    //     decoration: InputDecoration(
+                                    //       // prefixIcon: ElevatedButton(
+                                    //       //   style: ElevatedButton.styleFrom(
+                                    //       //       backgroundColor:
+                                    //       //           Theme.of(context)
+                                    //       //               .dialogBackgroundColor,
+                                    //       //       padding: EdgeInsets.only(
+                                    //       //           left: 5, right: 5),
+                                    //       //       elevation: 0.0),
+                                    //       //   onPressed: () async {
+                                    //       //     result = await FilePicker.platform
+                                    //       //         .pickFiles(
+                                    //       //       type: FileType.image,
+                                    //       //       withData: true,
+                                    //       //       allowedExtensions: widget
+                                    //       //           .htmlToolbarOptions
+                                    //       //           .imageExtensions,
+                                    //       //     );
+                                    //       //     if (result?.files.single.name !=
+                                    //       //         null) {
+                                    //       //       setState(() {
+                                    //       //         filename.text =
+                                    //       //             result!.files.single.name;
+                                    //       //       });
+                                    //       //     }
+                                    //       //   },
+                                    //       //   child:
+
+                                    //       //   Text('Choose image',
+                                    //       //       style: TextStyle(
+                                    //       //           color: Theme.of(context)
+                                    //       //               .textTheme
+                                    //       //               .bodySmall
+                                    //       //               ?.color)),
+                                    //       // ),
+                                    //       suffixIcon: result != null
+                                    //           ? IconButton(
+                                    //               icon: Icon(Icons.close),
+                                    //               onPressed: () {
+                                    //                 setState(() {
+                                    //                   result = null;
+                                    //                   filename.text = '';
+                                    //                 });
+                                    //               })
+                                    //           : Container(height: 0, width: 0),
+                                    //       errorText: validateFailed,
+                                    //       errorMaxLines: 2,
+                                    //       border: InputBorder.none,
+                                    //     )),
+                                    if (widget
+                                        .htmlToolbarOptions.allowImagePicking)
+                                      SizedBox(height: 20),
                                   if (widget
                                       .htmlToolbarOptions.allowImagePicking)
                                     Text('URL',
