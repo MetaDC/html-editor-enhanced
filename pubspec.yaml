@@ -1,25 +1,26 @@
 name: html_editor_enhanced
-description: HTML rich text editor for Android, iOS, and Web, using the Summernote library.
+description:
+  HTML rich text editor for Android, iOS, and Web, using the Summernote library.
   Enhanced with highly customizable widget-based controls, bug fixes, callbacks, dark mode, and more.
 version: 2.6.0
 homepage: https://github.com/tneotia/html-editor-enhanced
 
 environment:
-  sdk: '>=3.4.0 <4.0.0'
+  sdk: ^3.7.0-78.0.dev
   # flutter: ">=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   # webview plugin
-  flutter_inappwebview: ^6.0.0
+  flutter_inappwebview: ^6.1.5
   # plugin to get webview's visible fraction for keyboard height adjustment
   visibility_detector: ^0.4.0+2
   # plugin to get when the keyboard is hidden via back (Android)
   # or "done" (iOS) to reset the editor's height
   flutter_keyboard_visibility: ^6.0.0
   # plugin to show a color picker for foreground/highlight color
-  flex_color_picker: ^3.6.0
+  flex_color_picker: ^3.7.0
   # plugin to get files from filesystem
   file_picker: ^9.0.2
   # plugin to show a scrollable number picker for inserting tables
@@ -31,7 +32,7 @@ dependencies:
   # plugin to help maintain effective Dart standards
   lints: ^5.1.1
   # plugin for @internal annotation
-  meta: '>=1.0.0 <2.0.0'
+  meta: ^1.16.0
 
 dev_dependencies:
   flutter_test:
@@ -42,7 +43,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   assets:
     - packages/html_editor_enhanced/assets/summernote.html
     - packages/html_editor_enhanced/assets/summernote-no-plugins.html
