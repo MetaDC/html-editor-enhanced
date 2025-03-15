@@ -6,7 +6,7 @@ description: Demonstrates how to use the html_editor_enhanced plugin.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: ^3.7.0-78.0.dev
+  sdk: '>=3.2.2 <4.0.0'
 
 dependencies:
   flutter:
